@@ -4,7 +4,6 @@
 - nx installed (`npm install --global nx@latest`)
 
 ## Init app
-- unpack zip file
 - run `npm i`
 
 ## Start the app
