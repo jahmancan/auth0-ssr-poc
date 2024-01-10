@@ -10,7 +10,7 @@
 
 To start the development server run `npm run start`. Open your browser and navigate to http://localhost:4200/. 
 
-## Start the app w angular universal
+## Start the app with angular universal
 
 To start the development server run `npm run start:ssr`. Open your browser and navigate to http://localhost:4201/.
 
