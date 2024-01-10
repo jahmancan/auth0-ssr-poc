@@ -1,0 +1,30 @@
+{
+  "name": "angular-universal-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/angular-universal-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/angular-universal-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "angular-universal:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "angular-universal:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "angular-universal:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["angular-universal"]
+}
